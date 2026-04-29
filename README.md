@@ -1,4 +1,2 @@
-# testRepo
+# Coursera IBM JavaScript
 courseraLab
-
-It's a markdown file in this repository
