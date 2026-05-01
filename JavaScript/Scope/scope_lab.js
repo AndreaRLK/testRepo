@@ -19,19 +19,20 @@ console.log(globalConst); // Output: "I'm a global constant"
   console.log(blockLet);
   console.log(blockConst);
 }
-
+// Function scope
 function show() {
   var functionVar = "I'm a function-scoped var";
   let functionLet = "I'm scoped to the function body with let";
   const functionConst = "I'm scoped to the function body with const";
-  
-  console.log(functionVar); // Throws ReferenceError
-  console.log(functionLet); // Throws ReferenceError
-  console.log(functionConst);
+
+  console.log(functionVar); // Valid inside the function
+  console.log(functionLet); // Valid inside the function
+  console.log(functionConst); // Valid inside the function
+  console.log('Dev message inside the function scope');
 }
 show();
 
-// Invalid outside the function scope
+// Invalid outside the function scope or 'dead code'
 console.log(functionVar); // Throws ReferenceError
 console.log(functionLet); // Throws ReferenceError
 console.log(functionConst); // Throws ReferenceError
