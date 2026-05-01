@@ -57,3 +57,9 @@ switch (userType) {
     console.log("Access Denied.");
     console.log("User Category: " + userCategory);
 }
+
+//ternary operator for isAuthenticated and authentication status
+let isAuthenticated = true;
+
+let authStatus = userRole ? "Authenticated" : "Not Authenticated";
+console.log("Authentication Status: " + authStatus);
