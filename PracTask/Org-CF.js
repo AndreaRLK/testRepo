@@ -4,35 +4,35 @@ let userMessage;
 
 // Using if-else statements for user login status and role
 if (isLoggedIn) {
-  if (userRole === "admin") {
-    userMessage = "LogIn By: Admin";
+  if (userRole === "employee") {
+    userMessage = "LogIn By: Employee";
     console.log(userMessage);
-  } else if (userRole === "editor") {
-    userMessage = "LogIn By: Editor";
+  } else if (userRole === "member") {
+    userMessage = "LogIn By: Member";
     console.log(userMessage);
-  } else if (userRole === "viewer") {
-    userMessage = "LogIn By: Viewer";
+  } else if (userRole === "subscriber") {
+    userMessage = "LogIn By: Subscriber";
     console.log(userMessage);
   }
 } else {
-  defaultMessage = "Log in required.";
+  defaultMessage = "Non-subscriber. Account setup required.";
   console.log(defaultMessage);
 }
 
 // Using if-else statements for user role access control
 let accessLevel;
 
-if (userRole === "admin") {
+if (userRole === "member") {
   accessLevel = "Full Access";
-  console.log("Admin: Full access has been granted.");
-} else if (userRole === "editor") {
+  console.log("Member: Access to Dietary Services and Dietician Consultation.");
+} else if (userRole === "employee") {
   accessLevel = "Limited Access";
-  console.log("Editor: Limited access has been granted.");
-} else if (userRole === "viewer") {
-  accessLevel = "Read-Only Access";
-  console.log("Viewer: Read-only access has been granted.");
+  console.log("Employee: Access to Dietary Services.");
+} else if (userRole === "subscriber") {
+  accessLevel = "Partial Access";
+  console.log("Subscriber: Limited Dietary Services.");
 } else {
-  console.log("Not Affiliated: Access Denied.");
+  console.log("Non-Subscriber: Dietary Service Access Denied.");
 }
 
 // Using switch-case statements for user role access control
@@ -40,15 +40,15 @@ let userType = userRole;
 let userCategory;
 
 switch (userType) {
-  case "admin":
-    userCategory = "Administrator";
+  case "member":
+    userCategory = "Enrolled Member";
     console.log("User Category: " + userCategory);
     break;
-  case "editor":
-    userCategory = "Manager";
+  case "employee":
+    userCategory = "Org Representative";
     console.log("User Category: " + userCategory);
     break;
-  case "viewer":
+  case "subscriber":
     userCategory = "Subscriber";
     console.log("User Category: " + userCategory);
     break;
