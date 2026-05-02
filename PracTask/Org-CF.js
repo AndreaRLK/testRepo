@@ -1,5 +1,5 @@
 let isLoggedIn = true;
-let userRole = "admin";
+let userRole = "employee";
 let userMessage;
 
 // Using if-else statements for user login status and role
@@ -30,9 +30,9 @@ if (userRole === "member") {
   console.log("Employee: Access to Dietary Services.");
 } else if (userRole === "subscriber") {
   accessLevel = "Partial Access";
-  console.log("Subscriber: Limited Dietary Services.");
+  console.log("Subscriber: Partial Access to Dietary Services.");
 } else {
-  console.log("Non-Subscriber: Dietary Service Access Denied.");
+  console.log("Non-Subscriber: Restricted Access to Dietary Services.");
 }
 
 // Using switch-case statements for user role access control
@@ -45,7 +45,7 @@ switch (userType) {
     console.log("User Category: " + userCategory);
     break;
   case "employee":
-    userCategory = "Org Representative";
+    userCategory = "Organization Rep";
     console.log("User Category: " + userCategory);
     break;
   case "subscriber":
